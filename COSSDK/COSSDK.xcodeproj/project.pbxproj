@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9C7FEF9E0BF78C69FB24310 /* libPods-COSSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AEF43E33CE825F4BF12D7A /* libPods-COSSDK.a */; };
 		F12F2F6F22E1939300714BD8 /* COSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12F2F6522E1939300714BD8 /* COSSDK.framework */; };
 		F12F2F7422E1939300714BD8 /* COSSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F12F2F7322E1939300714BD8 /* COSSDKTests.m */; };
 		F12F2F7622E1939300714BD8 /* COSSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F12F2F6822E1939300714BD8 /* COSSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90AEF43E33CE825F4BF12D7A /* libPods-COSSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COSSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3C6EBEFDB3B036F1DAAF2E /* Pods-COSSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COSSDK.release.xcconfig"; path = "Target Support Files/Pods-COSSDK/Pods-COSSDK.release.xcconfig"; sourceTree = "<group>"; };
+		EADD3CD025F255BAC89F9735 /* Pods-COSSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COSSDK.debug.xcconfig"; path = "Target Support Files/Pods-COSSDK/Pods-COSSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		F12F2F6522E1939300714BD8 /* COSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = COSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12F2F6822E1939300714BD8 /* COSSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COSSDK.h; sourceTree = "<group>"; };
 		F12F2F6922E1939300714BD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C7FEF9E0BF78C69FB24310 /* libPods-COSSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +55,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AE7CA93CD545ED35F63F423 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90AEF43E33CE825F4BF12D7A /* libPods-COSSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C41182B4C7512A32508B26AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EADD3CD025F255BAC89F9735 /* Pods-COSSDK.debug.xcconfig */,
+				9C3C6EBEFDB3B036F1DAAF2E /* Pods-COSSDK.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		F12F2F5B22E1939200714BD8 = {
 			isa = PBXGroup;
 			children = (
 				F12F2F6722E1939300714BD8 /* COSSDK */,
 				F12F2F7222E1939300714BD8 /* COSSDKTests */,
 				F12F2F6622E1939300714BD8 /* Products */,
+				C41182B4C7512A32508B26AE /* Pods */,
+				9AE7CA93CD545ED35F63F423 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F12F2F7922E1939300714BD8 /* Build configuration list for PBXNativeTarget "COSSDK" */;
 			buildPhases = (
+				7B0750EB35D0FADC8A0400A1 /* [CP] Check Pods Manifest.lock */,
 				F12F2F6022E1939300714BD8 /* Headers */,
 				F12F2F6122E1939300714BD8 /* Sources */,
 				F12F2F6222E1939300714BD8 /* Frameworks */,
 				F12F2F6322E1939300714BD8 /* Resources */,
+				1DF7FDD6C59D9481C8303FEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +214,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DF7FDD6C59D9481C8303FEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COSSDK/Pods-COSSDK-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COSSDK/Pods-COSSDK-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-COSSDK/Pods-COSSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B0750EB35D0FADC8A0400A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COSSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F12F2F6122E1939300714BD8 /* Sources */ = {
@@ -335,6 +404,7 @@
 		};
 		F12F2F7A22E1939300714BD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EADD3CD025F255BAC89F9735 /* Pods-COSSDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -358,6 +428,7 @@
 		};
 		F12F2F7B22E1939300714BD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3C6EBEFDB3B036F1DAAF2E /* Pods-COSSDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
