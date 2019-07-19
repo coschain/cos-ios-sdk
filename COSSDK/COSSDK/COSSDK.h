@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <openssl_grpc/ec.h>
 
 //! Project version number for COSSDK.
 FOUNDATION_EXPORT double COSSDKVersionNumber;
